@@ -12,7 +12,7 @@ export interface InternalUrl {
 }
 
 /** Returns an `URL` like object to make requests/redirects from server-side */
-export default function parseUrl(nextauthUrl?: string): InternalUrl {
+export default function parseUrl(nextauthUrl: string): InternalUrl {
   const defaultPathname = "/api/auth"
 
   const httpUrl = nextauthUrl.startsWith("http") ? nextauthUrl : (

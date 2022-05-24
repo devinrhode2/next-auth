@@ -60,6 +60,11 @@ async function handleMiddleware(
 ) {
   const signInPage = options?.pages?.signIn ?? "/api/auth/signin"
   const errorPage = options?.pages?.error ?? "/api/auth/error"
+  if (!process.env.NEXTAUTH_URL) {
+    throw new Error(
+      'process.env.NEXTAUTH_URL is falsey:' + process.env.NEXTAUTH_URL
+    )
+  }
   const basePath = parseUrl(process.env.NEXTAUTH_URL).path
   // Avoid infinite redirect loop
   if (
