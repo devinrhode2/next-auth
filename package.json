@@ -43,6 +43,10 @@
   "engines": {
     "node": "^12.19.0 || ^14.15.0 || ^16.13.0"
   },
+  "volta": {
+    "node": "18.2.0",
+    "yarn": "1.22.18"
+  },
   "prettier": {
     "semi": false,
     "singleQuote": false
